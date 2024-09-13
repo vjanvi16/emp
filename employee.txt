@@ -1,0 +1,67 @@
+<?php
+
+class perent
+{
+    public $no;
+    public $name;
+    public $salary;
+
+    function __construct($no,$name,$salary)
+    {
+        $this->no = $no;
+        $this->name = $name;
+        $this->salary = $salary;
+    }
+    function get_no()
+    {
+        return $this->no;
+    } 
+    function get_name()
+    {
+        return $this->name;
+    }
+     function get_salary()
+    {
+        return $this->salary;
+    }
+    function result()
+    {
+        echo "Information of employee<br>";
+        echo "-------------------------------<br>";
+        echo "Employee no : ".$this->get_no();
+        echo "<br>";
+        echo "Employee name : ".$this->get_name();
+        echo "<br>";
+        echo "Employee salary : ".$this->get_salary();
+        echo "<br>";
+        echo "Employee country : ".$this->get_con();
+        echo "<br><br><br>";
+    }
+
+}
+class child extends perent
+{
+    public $country;
+
+    function contry($country)
+    {
+        $this->country = $country;
+    }
+    function get_con()
+    {
+        return $this->country;
+    }
+    function emp()
+    {
+        return $this->result();
+    }
+}
+
+$e1 = new child("1","Ans","86000","Sweezer Land");
+$e2 = new child("2","Jnv","92000","South Korea");
+$e3=$e1->contry("Sweezer Land");
+$e4=$e2->contry("South Korea");
+$e1->emp();
+$e2->emp();
+
+?>
