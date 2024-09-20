@@ -57,7 +57,7 @@ class child extends perent
     }
 }
 
-$e1 = new child("1","Ans","86000","Sweezer Land");
+$e1 = new child("1","Ans","84000","Sweezer Land");
 $e2 = new child("2","Jnv","92000","South Korea");
 $e3=$e1->contry("Sweezer Land");
 $e4=$e2->contry("South Korea");
